@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+:root{
+    --clr-dark:#0B0D17;
+    --clr-gray:#979797;
+}
+
+/* desktop */
+/* @media (min-width: 1024px) {
+
+    body{
+        background-color: #0B0D17;
+    }
+
+} */
+/* Tablet */
+/* @media (min-width: 810px) 
+  and (max-width: 1024px {
+    body{
+        background-color: #002aff;
+    }
+}
+
+
+@media (max-width: 500px) {
+    body{
+        background-color: #00ff3c;
+    }
+} */
+/* //////////////////// */
+
+/* //////////////// */
+/* Layout */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+@media (max-width:1024px) {
+.grid{
+   grid-template-columns: 1fr;
+   
+}
+.flex{
+    flex-direction: row;
+}
+}
+.flex-imp{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.grid-col{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+/* /////////////////// */
+.text-dark{
+    color: var(--clr-dark);
+}
+.text-light{
+    color: white;
+}
+.cap{
+    text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+    .center{
+        text-align: center;
+    }
+}
