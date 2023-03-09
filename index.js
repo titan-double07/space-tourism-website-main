@@ -200,5 +200,78 @@ for (const btn of planet) {
   })
 }
 
+// CREW
+const crewRole= document.querySelector('.commander-text h4')
+const crewName= document.querySelector('.commander-text h3')
+const crewBio= document.querySelector('.commander-text p')
+const crewImg = document.querySelector('.commander-img img')
+const crewLinks= document.querySelectorAll('.crew-link')
+const [commander, missionSpecialist, pilot, flightEngineer] = data.crew
+
+
+for (const btn of crewLinks) {
+  btn.addEventListener('click', (e) => {
+    const link = e.target.classList
+    switch (true) {
+      case (link.contains('mem1')):
+        crewName.innerText=commander.name
+        crewRole.innerText=commander.role
+        crewBio.innerText=commander.bio
+        crewImg.src = commander.images.png
+        for (const btn of crewLinks) {
+          if (btn.classList.contains('mem1') ) {
+            btn.classList.add('active')
+          } else {
+            btn.classList.remove('active')
+          }
+        }
+        break;
+      case (link.contains('mem2')):
+        crewName.innerText=missionSpecialist.name
+        crewRole.innerText=missionSpecialist.role
+        crewBio.innerText=missionSpecialist.bio
+        crewImg.src = missionSpecialist.images.png
+        for (const btn of crewLinks) {
+          if (btn.classList.contains('mem2')) {
+            btn.classList.add('active')
+          } else {
+            btn.classList.remove('active')
+          }
+        }
+        break;
+      case (link.contains('mem3')):
+        crewName.innerText=pilot.name
+        crewRole.innerText=pilot.role
+        crewBio.innerText=pilot.bio
+        crewImg.src = pilot.images.png
+        for (const btn of crewLinks) {
+          if (btn.classList.contains('mem3')) {
+            btn.classList.add('active')
+          } else {
+            btn.classList.remove('active')
+          }
+        }
+        break;
+      case (link.contains('mem4')):
+        crewName.innerText=flightEngineer.name
+        crewRole.innerText=flightEngineer.role
+        crewBio.innerText=flightEngineer.bio
+        crewImg.src = flightEngineer.images.png
+        for (const btn of crewLinks) {
+          if (btn.classList.contains('mem4')) {
+            btn.classList.add('active')
+          } else {
+            btn.classList.remove('active')
+          }
+        }
+        break;
+      
+        default:
+          break;
+      }
+      
+  })
+
+}
 
 
